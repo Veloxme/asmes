@@ -1,58 +1,215 @@
 ---
 import { Image } from "astro:assets";
+const img =
+  "https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D";
 ---
 
 <section
-  id='nosotros'
-  class='py-20 bg-white'>
-  <div class='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-    <div class='grid grid-cols-1 md:grid-cols-2 gap-12 items-center'>
-      <div class='slide-left'>
-        <h2 class='text-4xl font-bold text-gray-900 mb-6'>
-          Nuestra <span class='gradient-text'>Misión</span>
-        </h2>
-        <p class='text-lg text-gray-600 mb-6'>
-          Somos una asociación civil dedicada a promover la excelencia en la
-          práctica médica, fomentar la educación continua y defender los
-          derechos de los profesionales de la salud en Sinaloa.
-        </p>
-        <p class='text-lg text-gray-600 mb-6'>
-          Trabajamos para mantener los más altos estándares éticos y
-          profesionales, contribuyendo al mejoramiento de la salud de nuestra
-          comunidad.
-        </p>
-        <!-- <button
-          class='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full hover:shadow-lg transition'>
-          Conoce Más
-        </button> -->
-      </div>
-      <div class='slide-right'>
+  id='valores'
+  class='py-20 px-6 bg-gradient-to-br from-gray-50 to-blue-50'>
+  <div class='container mx-auto'>
+    <h3 class='text-4xl font-bold text-center text-gray-800 mb-16'>
+      Nuestros Valores
+    </h3>
+    <div class='grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto'>
+      <div class='bg-white rounded-xl p-6 hover:shadow-xl transition group'>
         <div
-          class='relative bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 rounded-3xl p-1 shadow-2xl floating'>
-          <div
-            class='bg-white rounded-3xl p-8 h-96 flex items-center justify-center'>
-            <Image
-              src='https://images.unsplash.com/photo-1624727828489-a1e03b79bba8?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
-              alt='about'
-              inferSize={true}
-            />
-            <!-- <svg
-              class='w-64 h-64 text-purple-600'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'>
-              <path
-                stroke-linecap='round'
-                stroke-linejoin='round'
-                stroke-width='1'
-                d='M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z'
-              ></path>
-            </svg> -->
-          </div>
-          <div
-            class='absolute inset-0 rounded-3xl shimmer-effect pointer-events-none'>
-          </div>
+          class='w-14 h-14 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition'>
+          <svg
+            class='w-7 h-7 text-white'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+            ></path>
+          </svg>
         </div>
+        <h4 class='text-xl font-bold text-gray-800 mb-3'>Profesionalismo</h4>
+        <p class='text-gray-600 leading-relaxed'>
+          Compromiso absoluto con la ética, la calidad y la responsabilidad en
+          el ejercicio médico.
+        </p>
+      </div>
+
+      <div class='bg-white rounded-xl p-6 hover:shadow-xl transition group'>
+        <div
+          class='w-14 h-14 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition'>
+          <svg
+            class='w-7 h-7 text-white'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z'
+            ></path>
+          </svg>
+        </div>
+        <h4 class='text-xl font-bold text-gray-800 mb-3'>Colaboración</h4>
+        <p class='text-gray-600 leading-relaxed'>
+          Promovemos el diálogo respetuoso, el trabajo conjunto y el intercambio
+          de conocimientos.
+        </p>
+      </div>
+
+      <div class='bg-white rounded-xl p-6 hover:shadow-xl transition group'>
+        <div
+          class='w-14 h-14 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition'>
+          <svg
+            class='w-7 h-7 text-white'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253'
+            ></path>
+          </svg>
+        </div>
+        <h4 class='text-xl font-bold text-gray-800 mb-3'>
+          Excelencia Académica
+        </h4>
+        <p class='text-gray-600 leading-relaxed'>
+          Fomentamos la actualización constante, la capacitación y el desarrollo
+          científico.
+        </p>
+      </div>
+
+      <div class='bg-white rounded-xl p-6 hover:shadow-xl transition group'>
+        <div
+          class='w-14 h-14 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition'>
+          <svg
+            class='w-7 h-7 text-white'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z'
+            ></path>
+          </svg>
+        </div>
+        <h4 class='text-xl font-bold text-gray-800 mb-3'>Servicio</h4>
+        <p class='text-gray-600 leading-relaxed'>
+          Nuestra labor se orienta al bienestar de los profesionales y, a través
+          de ellos, al de la sociedad.
+        </p>
+      </div>
+
+      <div class='bg-white rounded-xl p-6 hover:shadow-xl transition group'>
+        <div
+          class='w-14 h-14 bg-gradient-to-br from-blue-600 to-teal-600 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition'>
+          <svg
+            class='w-7 h-7 text-white'
+            fill='none'
+            stroke='currentColor'
+            viewBox='0 0 24 24'>
+            <path
+              stroke-linecap='round'
+              stroke-linejoin='round'
+              stroke-width='2'
+              d='M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z'
+            ></path>
+          </svg>
+        </div>
+        <h4 class='text-xl font-bold text-gray-800 mb-3'>Integridad</h4>
+        <p class='text-gray-600 leading-relaxed'>
+          Actuamos con honestidad, respeto y transparencia en cada acción de la
+          asociación.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section
+  id='objetivos'
+  class='py-20 px-6 bg-white'>
+  <div class='container mx-auto max-w-5xl'>
+    <h3 class='text-4xl font-bold text-center text-gray-800 mb-16'>
+      Objetivos
+    </h3>
+    <div class='space-y-6'>
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          1
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Construir una comunidad sólida que represente y apoye al gremio
+          médico.
+        </p>
+      </div>
+
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          2
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Crear espacios de diálogo, capacitación, foros y disertaciones
+          médicas.
+        </p>
+      </div>
+
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          3
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Desarrollar iniciativas que contribuyan al progreso científico y
+          profesional.
+        </p>
+      </div>
+
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          4
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Ofrecer herramientas, programas y apoyo para elevar el desempeño de
+          los médicos.
+        </p>
+      </div>
+
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          5
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Difundir lineamientos y principios que fortalezcan la responsabilidad
+          social del gremio.
+        </p>
+      </div>
+
+      <div
+        class='flex items-start space-x-4 p-6 bg-gradient-to-r from-blue-50 to-transparent rounded-xl hover:shadow-lg transition'>
+        <div
+          class='flex-shrink-0 w-8 h-8 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full flex items-center justify-center text-white font-bold'>
+          6
+        </div>
+        <p class='text-gray-700 text-lg leading-relaxed pt-1'>
+          Contribuir al desarrollo del sistema de salud en la región mediante
+          profesionales mejor preparados, coordinados y respaldados.
+        </p>
       </div>
     </div>
   </div>

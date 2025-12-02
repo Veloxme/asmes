@@ -2,6 +2,12 @@
 import { Image } from "astro:assets";
 import logo from "/src/assets/ASMES.png";
 // Componente del encabezado
+
+const list = [
+  { name: "Inicio", href: "#inicio" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Servicios", href: "#servicios" },
+];
 ---
 
 <nav class='bg-white shadow-lg fixed w-full top-0 z-50'>
@@ -17,21 +23,15 @@ import logo from "/src/assets/ASMES.png";
         </div>
       </div>
       <div class='hidden md:flex items-center space-x-8'>
-        <a
-          href='#inicio'
-          class='text-gray-700 hover:text-blue-600 transition'
-          >Inicio</a
-        >
-        <a
-          href='#nosotros'
-          class='text-gray-700 hover:text-blue-600 transition'
-          >Nosotros</a
-        >
-        <a
-          href='#servicios'
-          class='text-gray-700 hover:text-blue-600 transition'
-          >Servicios</a
-        >
+        {
+          list.map((l) => (
+            <a
+              href={l.href}
+              class='text-gray-700 hover:text-blue-600 transition'>
+              {l.name}
+            </a>
+          ))
+        }
         <a
           class='bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-2 rounded-full hover:shadow-lg transition'
           href='#contacto'>

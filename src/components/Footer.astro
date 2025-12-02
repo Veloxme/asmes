@@ -1,7 +1,18 @@
 ---
-const UBICATION = "Mazatlán, Sinaloa, México";
-const EMAIL = "contacto.asmes@gmail.com";
+const UBICATION =
+  "Avenida José Luis Peche Rice, número 4801, interior 305, El Venadillo, C.P. 82129, Mazatlán, Sinaloa";
+const EMAIL = "asmes.mzt@gmail.com";
 const TEL = "+52 (669) 123-4567";
+
+import { Image } from "astro:assets";
+import logo from "/src/assets/ASMES.png";
+
+const list = [
+  { name: "Inicio", href: "#inicio" },
+  { name: "Nosotros", href: "#nosotros" },
+  { name: "Servicios", href: "#servicios" },
+  { name: "Contacto", href: "#contacto" },
+];
 ---
 
 <footer class='bg-gray-900 text-white py-12'>
@@ -9,11 +20,11 @@ const TEL = "+52 (669) 123-4567";
     <div class='grid grid-cols-1 md:grid-cols-4 gap-8'>
       <div class='col-span-2'>
         <div class='flex items-center mb-4'>
-          <div
-            class='w-10 h-10 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg flex items-center justify-center'>
-            <span class='text-white font-bold'>A</span>
-          </div>
-          <span class='ml-2 text-lg font-bold'>ASMYES</span>
+          <Image
+            src={logo}
+            alt='logo ASMES'
+            class='h-12 w-auto'
+          />
         </div>
         <p class='text-gray-400 mb-4'>
           Asociación Sinaloense de Médicos y Expertos en la Salud, A.C.
@@ -25,34 +36,17 @@ const TEL = "+52 (669) 123-4567";
       <div>
         <h4 class='font-bold mb-4'>Enlaces</h4>
         <ul class='space-y-2 text-gray-400'>
-          <li>
-            <a
-              href='#inicio'
-              class='hover:text-white transition'
-              >Inicio</a
-            >
-          </li>
-          <li>
-            <a
-              href='#nosotros'
-              class='hover:text-white transition'
-              >Nosotros</a
-            >
-          </li>
-          <li>
-            <a
-              href='#servicios'
-              class='hover:text-white transition'
-              >Servicios</a
-            >
-          </li>
-          <li>
-            <a
-              href='#contacto'
-              class='hover:text-white transition'
-              >Contacto</a
-            >
-          </li>
+          {
+            list.map((l) => (
+              <li>
+                <a
+                  href={l.href}
+                  class='hover:text-white transition'>
+                  {l.name}
+                </a>
+              </li>
+            ))
+          }
         </ul>
       </div>
       <div>
@@ -65,7 +59,7 @@ const TEL = "+52 (669) 123-4567";
       </div>
     </div>
     <div class='border-t border-gray-800 mt-8 pt-8 text-center text-gray-400'>
-      <p>&copy; 2025 ASMYES. Todos los derechos reservados.</p>
+      <p>&copy; 2025 ASMES. Todos los derechos reservados.</p>
     </div>
   </div>
 </footer>
